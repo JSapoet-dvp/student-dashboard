@@ -1,0 +1,37 @@
+$darkThemeColor: #022140;
+$middleThemeColor: #265077;
+$difficultyColor: green;
+$appreciationColor: gold;
+$textLightColor: antiquewhite;
+$buttonTextUnusedColor: #022130;
+$headerColor: rgb(94, 94, 94);
+
+$buttonBorderLightColor: 3px solid $textLightColor;
+$buttonHoverOpacity: 0.7;
+
+
+@mixin mainContainer() {
+    background: #f3f3f3;
+    box-shadow: 3px 3px 4px grey;
+    border-radius: 20px;
+}
+
+@mixin mainContainerHover() {
+    scale: 1.6;
+    border: 1px solid $headerColor;
+    box-shadow: 5px 5px 8px grey;
+}
+
+@mixin textLightColor() {
+    color: $textLightColor;
+    text-shadow: 1px 1px 1px black;
+}
+
+@mixin darkButtonUsed() {
+    height: 40px;
+    background: $darkThemeColor;
+    border: $buttonBorderLightColor;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px $darkThemeColor;
+    cursor: pointer;
+}
