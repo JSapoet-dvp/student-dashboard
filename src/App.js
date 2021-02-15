@@ -20,6 +20,7 @@ class App extends React.Component {
       dataLoaded: false,
     }
     this.handleChange = this.handleChange.bind(this);
+    this.handleNewPage = this.handleNewPage.bind(this);
   }
 
 
@@ -28,6 +29,14 @@ class App extends React.Component {
       ratingData: ratingData,
       studentData: studentData,
       dataLoaded: true,
+    })
+  }
+
+
+  handleNewPage() {
+    this.setState({
+      difficultyDisplay: true,
+      appreciationDisplay: true,
     })
   }
 
@@ -45,11 +54,11 @@ class App extends React.Component {
           <div>
             <header className="header">
               <nav>
-                <Link to="/"><img className="header__logo" src={Logo} alt="logo" /></Link>
+                <Link to="/" onClick={this.handleNewPage}><img className="header__logo" src={Logo} alt="logo" /></Link>
                 <ul>
-                  <li><Link to="/">Dashboard</Link></li>
-                  <li><Link to="/students">Students</Link></li>
-                  <li><Link to="/assignments">Assignments</Link></li>
+                  <li><Link to="/" onClick={this.handleNewPage}>Dashboard</Link></li>
+                  <li><Link to="/students" onClick={this.handleNewPage}>Students</Link></li>
+                  <li><Link to="/assignments" onClick={this.handleNewPage}>Assignments</Link></li>
                 </ul>
               </nav>
             </header>
