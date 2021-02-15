@@ -48,7 +48,7 @@ class App extends React.Component {
           </header>
           <main>
             <Switch>
-              <Route exact path="/"><Dashboard data={this.state} handleChange={this.handleChange} ratingData={this.state.ratingData} /></Route>
+              <Route exact path="/"><Dashboard data={this.state} handleChange={this.handleChange} /></Route>
               <Route path="/students"><Students data={this.state} handleChange={this.handleChange} /></Route>
               <Route path="/assignments"><Assignments data={this.state} handleChange={this.handleChange} /></Route>
             </Switch>

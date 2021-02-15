@@ -7,7 +7,7 @@ import DashboardForm from "./DashboardForm"
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
-        const studentList = [...new Set(props.ratingData.map(rating => rating.name))];
+        const studentList = [...new Set(props.data.ratingData.map(rating => rating.name))];
         this.state = {
             // studentsDisplay: [...new Set(props.ratingData.map(rating => rating.name))],
             studentsDisplay: studentList,
@@ -18,7 +18,7 @@ class Dashboard extends React.Component {
     }
 
     // componentDidMount() {
-    //     const studentList = [...new Set([...this.props.ratingData].map(rating => rating.name))];
+    //     const studentList = [...new Set([...this.props.data.ratingData].map(rating => rating.name))];
     //     this.setState({ studentsDisplay: studentList })
     // }
 
@@ -83,7 +83,7 @@ class Dashboard extends React.Component {
     handleHideForm = () => this.setState({ showDashboardForm: false });
 
     render() {
-        const averageAssignmentRatings = this.getAverageAssignmentRatings([...this.props.ratingData])
+        const averageAssignmentRatings = this.getAverageAssignmentRatings([...this.props.data.ratingData])
         const assignmentList = averageAssignmentRatings.map(rating => rating.assignment)
         return (
             <div>
