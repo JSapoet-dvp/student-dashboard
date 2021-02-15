@@ -9,18 +9,11 @@ class Dashboard extends React.Component {
         super(props);
         const studentList = [...new Set(props.data.ratingData.map(rating => rating.name))];
         this.state = {
-            // studentsDisplay: [...new Set(props.ratingData.map(rating => rating.name))],
             studentsDisplay: studentList,
-            // studentsDisplay: [],
             showDashboardForm: false,
         }
         this.handleFilterStudent = this.handleFilterStudent.bind(this);
     }
-
-    // componentDidMount() {
-    //     const studentList = [...new Set([...this.props.data.ratingData].map(rating => rating.name))];
-    //     this.setState({ studentsDisplay: studentList })
-    // }
 
 
     handleFilterStudent(event) {
@@ -68,8 +61,6 @@ class Dashboard extends React.Component {
         assignmentList.forEach(assignment => {
             const averageDifficulty = this.getAverage(studentRatingsDisplay, assignment, "difficulty");
             const averageAppreciation = this.getAverage(studentRatingsDisplay, assignment, "appreciation");
-            // const averageDifficulty = this.getAverage(ratingData, assignment, "difficulty");
-            // const averageAppreciation = this.getAverage(ratingData, assignment, "appreciation");
             averageAssignmentRatings.push({
                 assignment: assignment,
                 difficulty: averageDifficulty,

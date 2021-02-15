@@ -10,9 +10,9 @@ const TableView = (props) => {
                 <thead>
                     <tr className="table__headers">
                         <th className="table__headers__cel left">Name</th>
-                        <th className="table__headers__cel left"><a href="#" onClick={props.sortByAssignment}>Assignment <span className="fas fa-sort"> </span></a></th>
-                        <th className="table__headers__cel" ><a href="#" onClick={props.sortByDifficulty}>Difficulty <span className="fas fa-sort"> </span></a></th>
-                        <th className="table__headers__cel"><a href="#" onClick={props.sortByAppreciation}>Appreciation <span className="fas fa-sort"> </span></a></th>
+                        <th className="table__headers__cel left"><a onClick={props.sortByAssignment}>Assignment <span className="fas fa-sort"> </span></a></th>
+                        <th className="table__headers__cel" ><a onClick={props.sortByDifficulty}>Difficulty <span className="fas fa-sort"> </span></a></th>
+                        <th className="table__headers__cel"><a onClick={props.sortByAppreciation}>Appreciation <span className="fas fa-sort"> </span></a></th>
                     </tr>
                 </thead>
                 <tbody>{allRatings}</tbody>

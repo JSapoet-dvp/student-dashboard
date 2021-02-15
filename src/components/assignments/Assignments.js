@@ -23,9 +23,6 @@ class Assignments extends React.Component {
     handleHideForm = () => this.setState({ assignmentForm: false });
 
     render() {
-        // const allStudents = [...this.props.data.studentData].map(student => <StudentDetails key={student.id} student={student} />)
-        // const selectedStudentDetails = [...this.props.data.studentData].find(student => this.state.selectedStudent === student.first_name)
-        // const selectedStudentRatings = [...this.props.data.ratingData].filter(rating => this.state.selectedStudent === rating.name)
         const selectedAssignmentRatings = [...this.props.data.ratingData].filter(rating => this.state.selectedAssignment === rating.assignment)
         const studentList = selectedAssignmentRatings.map(rating => rating.name)
         return (
